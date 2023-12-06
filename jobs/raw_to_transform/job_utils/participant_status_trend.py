@@ -1,0 +1,12 @@
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+
+
+def transform(spark: SparkSession, primary_key: list):
+
+    exn_xxadsumt_xxadhsex_2_jb_df = spark.sql("select client_id, plan_number, cast(source_cycle_date as DATE) as source_cycle_date, active_not_contributing_count, cast(active_not_contributing_total_balance as DECIMAL(14,2)) as active_not_contribute_total_amount, active_contributing_count, cast(active_contributing_total_balance as DECIMAL(14,2)) as active_contributing_total_balance, eligible_not_participating_with_balance_count  as elig_not_part_balance_count, cast(eligible_not_participating_with_balance_total_balance as DECIMAL(14,2)) as elig_not_part_total_amount, eligible_not_participating_no_balance_count as elig_not_part_not_balance_count, suspended_with_balance_count, cast(suspended_with_balance_total_balance as DECIMAL(14,2)) as suspended_with_bal_total_bal, suspended_no_balance_count,ineligible_with_balance_count,'VRP-SP' as source_system,cast(ineligible_with_balance_total_balance as DECIMAL(14,2)) as ineligible_with_balance_total_amount, omni_status_code_01_count, cast(omni_status_code_01_total_balance as DECIMAL(14,2)) as omni_status_code_01_total_amount, omni_status_code_05_count, cast(omni_status_code_05_total_balance as DECIMAL(14,2)) as omni_status_code_05_total_bal, terminated_receiving_installments_count as terminated_rec_install_count,  cast(terminated_receiving_installments_total_balance as DECIMAL(14,2)) as terminated_rec_install_total_amount, terminated_with_balance_count, cast(terminated_with_balance_total_balance as DECIMAL(14,2)) as terminated_with_balance_total_amount, terminated_no_balance_count, participants_with_balance_count as part_with_balance_count, cast(participants_with_balance_total_balance as DECIMAL(14,2)) as participants_with_balance_total_amount, cast(participants_with_balance_average_balance as DECIMAL(14,2)) as part_with_balance_average_amount, catchup_eligible_count, cast(catchup_eligible_total_balance as DECIMAL(14,2)) as catchup_eligible_total_amount, catchup_participating_count, cast(catchup_participating_total_balance as DECIMAL(14,2)) as catchup_part_total_amount, coalesce(div_sub_id,'-9999') as div_sub_id from exn_xxadsumt_xxadhsex_2_jb")
+
+    transform_df = exn_xxadsumt_xxadhsex_2_jb_df
+
+    return transform_df

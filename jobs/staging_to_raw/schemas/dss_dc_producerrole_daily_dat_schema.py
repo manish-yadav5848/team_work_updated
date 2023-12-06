@@ -1,0 +1,31 @@
+from pyspark.sql.types import StructType, StructField, StringType, DateType, IntegerType
+
+schema = StructType([
+    StructField("dss_cycle_date", StringType(), True),
+    StructField("type_of_record", StringType(), True),
+    StructField("role_key", StringType(), True),
+    StructField("producer_role_type", StringType(), True),
+    StructField("agent_role", StringType(), True),
+    StructField("agent_split_percent", StringType(), True),
+    StructField("agent_role_start_date", StringType(), True),
+    StructField("agent_role_end_date", StringType(), True),
+    StructField("producer_role_source", StringType(), True),
+    StructField("agent_entity_key", StringType(), True),
+    StructField("agent_and_agency_code_combined", StringType(), True),
+    StructField("agent_tax_id", StringType(), True),
+    StructField("agent_last_name", StringType(), True),
+    StructField("agent_first_name", StringType(), True),
+    StructField("agent_mid_init", StringType(), True),
+    StructField("agent_suffix", StringType(), True),
+    StructField("full_agent_name", StringType(), True),
+    StructField("value_of_pais", StringType(), True),
+    StructField("plan_key_combo", StringType(), True),
+    StructField("plan_id", StringType(), True),
+    StructField("plan_source", StringType(), True),
+    StructField("participant_key", StringType(), True),
+    StructField("participant_source", StringType(), True),
+    StructField("participant_money_source", StringType(), True),
+    StructField("participant_level_code", StringType(), True),
+    StructField("participant_acct_number", StringType(), True),
+    StructField("eip_error_code", StringType(), True)
+])

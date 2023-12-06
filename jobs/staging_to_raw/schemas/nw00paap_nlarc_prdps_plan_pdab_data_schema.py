@@ -1,0 +1,27 @@
+from pyspark.sql.types import StructType, StructField, StringType, DateType, IntegerType
+
+schema = StructType([
+    StructField("client_id", StringType(), True),
+    StructField("plan_system_key", StringType(), True),
+    StructField("plan_number", StringType(), True),
+    StructField("plan_source_system", StringType(), True),
+    StructField("plan_company_code", StringType(), True),
+    StructField("filler1", StringType(), True),
+    StructField("plan_legal_name", StringType(), True),
+    StructField("plan_name", StringType(), True),
+    StructField("filler2", StringType(), True),
+    StructField("filler3", StringType(), True),
+    StructField("filler4", StringType(), True),
+    StructField("filler5", StringType(), True),
+    StructField("filler6", StringType(), True),
+    StructField("filler7", StringType(), True),
+    StructField("filler8", StringType(), True),
+    StructField("plan_spon_add_line1", StringType(), True),
+    StructField("plan_spon_add_line2", StringType(), True),
+    StructField("plan_spon_city", StringType(), True),
+    StructField("plan_spon_state", StringType(), True),
+    StructField("plan_spon_zip_code", StringType(), True),
+    StructField("plan_spon_country", StringType(), True),
+    StructField("plan_issue_date", StringType(), True),
+    StructField("filler9", StringType(), True),
+    StructField("plan_spon_add_line3", StringType(), True)])

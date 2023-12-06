@@ -1,0 +1,1524 @@
+{
+    "source": [
+        {
+            "sourceName": "dss_14",
+            "fileName": "NW00PAAP.NLDSS.PRDPS.PS50.PRDCREXT.LX.SEQ",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "ws_role_key",
+            "tableName": "nw00paap_nldss_prdps_ps50_prdcrext_lx_seq"
+        },
+        {
+            "sourceName": "dcs_dss",
+            "fileName": "DSS_DC_PRODUCERROLE_DAILY.DAT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "role_key",
+            "tableName": "dss_dc_producerrole_daily_dat"
+        },
+        {
+            "sourceName": "rps_hartford",
+            "fileName": "F950.RPS.PARSDBA.BAL.EWR",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "part_agg_sys_key,fund_num",
+            "tableName": "f950_rps_parsdba_bal_ewr_dat"
+        },
+        {
+            "sourceName": "rps_hartford",
+            "fileName": "F950.RPS.PARTCPNT.CEF.DATA.EWR",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "part_agg_sys_key",
+            "tableName": "f950_rps_partcpnt_cef_data_ewr_dat"
+        },
+        {
+            "sourceName": "rps_hartford",
+            "fileName":"F950.RPS.PLAN.CEF.DATA.EWR",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_sys_key",
+            "tableName": "f950_rps_plan_cef_data_ewr_dat"
+        },
+        {
+            "sourceName": "fund_operations_trading",
+            "fileName": "FO_ASSET.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "asset_code",
+            "tableName": "fo_asset_txt"
+        },
+        {
+            "sourceName": "dcs_dss",
+            "fileName": "F912PB.J912DOL.P912DOL5.PRDCREXT.LSEQ",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "role_key",
+            "tableName": "f912pb_j912dol_p912dol5_prdcrext_lseq"
+        },
+        {
+            "sourceName": "fund_operations_trading",
+            "fileName": "FO_FUND.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "fund_number",
+            "tableName": "fo_fund_txt"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PARTACT.PDAB.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "participant_acc_ref_key",
+            "tableName": "nw00paap_nlarc_prdps_partact_pdab_data"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PARTLOAN.PDAB.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_id,participant_acc_num,loan_number,loan_type",
+            "tableName": "nw00paap_nlarc_prdps_partloan_pdab_data"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PARTVAL.PDAB.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "part_aggr_system_key,fund_number",
+            "tableName": "nw00paap_nlarc_prdps_partval_pdab_data"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PLAN.PDAB.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_system_key",
+            "tableName": "nw00paap_nlarc_prdps_plan_pdab_data"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PDAB.LMIA.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "policy_number",
+            "tableName": "nw00paap_nlarc_prdps_pdab_lmia_data"
+        },
+        {
+            "sourceName": "ease_premier",
+            "fileName": "NW00PAAP.NLARC.PRDPS.PDAB.SFFA.DATA",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "policy_number,fund_number,money_source",
+            "tableName": "nw00paap_nlarc_prdps_pdab_sffa_data"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_AUTO_METHOD.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_auto_method_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_AUTOMATION_TYPE.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_automation_type_csv"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "SSN.OUTPUT.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "admin_tran_code,plan_number,client_id,old_participant_id,new_participant_id",
+            "tableName": "ssn_output_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "SSN.OUTPUT.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "admin_tran_code,plan_number,client_id,old_participant_id,new_participant_id",
+            "tableName": "ssn_output_ng"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_MARKET_SEGMENT.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_market_segment_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_MONEY_SOURCE_HELPER.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_money_source_helper_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_PRODUCT_HELPER.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_product_helper_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_ROLE_CODE_HELPER.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_role_code_helper_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PREMIER_FUND_TRANSLATION.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "premier_fund_translation_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "PDAB_SPONSOR.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "pdab_sponsor_csv"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "TRANSACTION_TYPE.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "",
+            "tableName": "transaction_type_csv"
+        },
+        {
+            "sourceName": "presto",
+            "fileName": "PRESTO_PLAN_DAILY.DAT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_number",
+            "tableName": "presto_plan_daily_dat"
+        },
+        {
+            "sourceName": "mis_reporting_extracts",
+            "fileName": "F986PB.MIS.J986DS.DETAIL.FILE",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "pais_entity_key",
+            "tableName": "f986pb_mis_j986ds_detail_file"
+        },
+        {
+            "sourceName": "setit_web_service",
+            "fileName": "SETIT_PLAN_DAILY_WC_DAT.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_id",
+            "tableName": "setit_plan_daily_wc_dat_txt"
+        },
+        {
+            "sourceName": "salesforce_retirement_inst_markets",
+            "fileName": "SLX_TPA_COMMON_DAILY.DAT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "tpa_code",
+            "tableName": "slx_tpa_common_daily_dat"
+        },
+        {
+            "sourceName": "salesforce_retirement_inst_markets",
+            "fileName": "STARS_DAILY_CONTACT.DAT",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_id,trustee_name",
+            "tableName": "stars_daily_contact_dat"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "BENEFICIARY_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,beneficiary_id",
+            "tableName": "beneficiary_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "EMPLOYER_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "employer_ein,employer_id,client_id",
+            "tableName": "employer_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_CONTRIBUTION_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id",
+            "tableName": "participant_contribution_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_DISTRIBUTION_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id",
+            "tableName": "participant_distribution_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_FUND_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id",
+            "tableName": "participant_fund_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_FUND_VNQ_WC_HIST.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id,as_of_date",
+            "tableName": "participant_fund_vnq_wc_hist_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_INVESTMENT_ELECTION_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id",
+            "tableName": "participant_investment_election_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_INVESTMENT_PRODUCT_ELECTION_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,investment_product_id",
+            "tableName": "participant_investment_product_election_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PARTICIPANT_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "client_id,plan_number,participant_id,party_id",
+            "tableName": "participant_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "PLAN_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "plan_vnq_wc_txt"
+        },
+        {
+            "sourceName": "relius_nq",
+            "fileName": "TRANSACTION_VNQ_WC.TXT",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id,transaction_type_code,transaction_date,newr_nqtxn_key",
+            "tableName": "transaction_vnq_wc_txt"
+        },
+        {
+            "sourceName": "customer_ods",
+            "fileName": "ODS_RETIREMENT_ACCOUNT",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_number,participant_id",
+            "tableName": "ods_retirement_account"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRCLD.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id",
+            "tableName": "exn_xxewre01_xxewrcld_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRCLD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id",
+            "tableName": "exn_xxewre01_xxewrcld_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPAP.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "exn_xxewre01_xxewrpap_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPAP.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "exn_xxewre01_xxewrpap_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPPL.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,loan_number,loan_use_indicator",
+            "tableName": "exn_xxewre01_xxewrppl_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPPL.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,loan_number,loan_use_indicator",
+            "tableName": "exn_xxewre01_xxewrppl_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRAEF.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_id",
+            "tableName": "exn_xxewre01_xxewraef_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRAEF.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_id",
+            "tableName": "exn_xxewre01_xxewraef_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_LOANVAL_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_LOANVAL_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_LOANVAL_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_LOANVAL_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_LOANVAL_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,loan_use_indicator,loan_number",
+            "tableName": "super_omni_newr_loanval_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source_code",
+            "tableName": "super_omni_newr_partacctms_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTACCTMS_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source_code",
+            "tableName": "super_omni_newr_partacctms_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTSRCVAL_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTSRCVAL_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTSRCVAL_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTSRCVAL_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTSRCVAL_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source",
+            "tableName": "super_omni_newr_partsrcval_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,money_source_code",
+            "tableName": "super_omni_newr_planvesting_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLANVESTING_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,money_source_code",
+            "tableName": "super_omni_newr_planvesting_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,withdrawal_code,withdrawal_description,withdrawal_type",
+            "tableName": "super_omni_newr_planwdrl_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLANWDRL_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,withdrawal_code,withdrawal_description,withdrawal_type",
+            "tableName": "super_omni_newr_planwdrl_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "super_omni_newr_particpantaccount_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTICPANTACCOUNT_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "super_omni_newr_particpantaccount_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLAN_INS_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLAN_INS_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLAN_INS_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLAN_INS_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLAN_INS_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,create_date,end_date",
+            "tableName": "super_omni_newr_plan_ins_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLAN_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLAN_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLAN_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLAN_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLAN_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "super_omni_newr_plan_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLAN_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLAN_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLAN_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLAN_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLAN_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "super_omni_newr_plan_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PARTGAABAL_MONTHLY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PARTGAABAL_MONTHLY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PARTGAABAL_MONTHLY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PARTGAABAL_MONTHLY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PARTGAABAL_MONTHLY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "super_omni_newr_partgaabal_monthly_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLAN_DIVSUB_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLAN_DIVSUB_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLAN_DIVSUB_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLAN_DIVSUB_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLAN_DIVSUB_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,div_sub_id",
+            "tableName": "super_omni_newr_plan_divsub_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_SEQHIST_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_SEQHIST_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_SEQHIST_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_SEQHIST_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_SEQHIST_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_number,participant_id,trade_date,run_date,run_time,sequence_number,base_transaction_code,activity_type,rev_code,posting_process_counter",
+            "tableName": "super_omni_newr_seqhist_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_SEQHIST_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_SEQHIST_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_SEQHIST_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_SEQHIST_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_SEQHIST_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_number,participant_id,trade_date,run_date,run_time,sequence_number,base_transaction_code,activity_type,rev_code,posting_process_counter",
+            "tableName": "super_omni_newr_seqhist_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_LIFEVAL_MONTHLY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_LIFEVAL_MONTHLY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_LIFEVAL_MONTHLY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_LIFEVAL_MONTHLY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_LIFEVAL_MONTHLY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "participant_agreement_system_key,carrier_name,fund_name,fund_number",
+            "tableName": "super_omni_newr_lifeval_monthly_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_PLAN_MINDIST_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_PLAN_MINDIST_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_PLAN_MINDIST_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_PLAN_MINDIST_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_PLAN_MINDIST_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,current_life_expectancy",
+            "tableName": "super_omni_newr_plan_mindist_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRTRXH.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_number,participant_id,trade_date,run_date,run_time,sequence_number,base_transaction_code,activity_type,rev_code,posting_process_counter",
+            "tableName": "exn_xxewre01_xxewrtrxh_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRTRXH.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "plan_number,participant_id,trade_date,run_date,run_time,sequence_number,base_transaction_code,activity_type,rev_code,posting_process_counter",
+            "tableName": "exn_xxewre01_xxewrtrxh_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSAX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date,div_sub_id,tran_type",
+            "tableName": "exn_xxadsumt_xxadhsax_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSAX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date,div_sub_id,tran_type",
+            "tableName": "exn_xxadsumt_xxadhsax_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSDX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date,participant_id,transfer_balance_seq_number",
+            "tableName": "exn_xxadsumt_xxadhsdx_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSDX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date,participant_id,transfer_balance_seq_number",
+            "tableName": "exn_xxadsumt_xxadhsdx_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSEX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsex_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSEX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsex_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSEX_2.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date,div_sub_id",
+            "tableName": "exn_xxadsumt_xxadhsex_2_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSBX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,div_sub_id,fund_id,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsbx_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSBX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,div_sub_id,fund_id,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsbx_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_BENE_DAILY_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_BENE_DAILY_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_BENE_DAILY_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_BENE_DAILY_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_BENE_DAILY_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,beneficiary_sequence_number,primary_contingent_indicator",
+            "tableName": "super_omni_newr_bene_daily_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_BENE_DAILY_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_BENE_DAILY_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_BENE_DAILY_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_BENE_DAILY_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_BENE_DAILY_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,beneficiary_sequence_number,primary_contingent_indicator",
+            "tableName": "super_omni_newr_bene_daily_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPFD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_iv",
+            "tableName": "exn_xxewre01_xxewrpfd_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPFD.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_iv",
+            "tableName": "exn_xxewre01_xxewrpfd_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPFL.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,loan_number,fund_id",
+            "tableName": "exn_xxewre01_xxewrpfl_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPMD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,current_life_expectancy,distribution_due_date",
+            "tableName": "exn_xxewre01_xxewrpmd_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRDPG.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,div_sub_id",
+            "tableName": "exn_xxewre01_xxewrdpg_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSFX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSFX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSFX_2.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,div_sub_id,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_2_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPFS.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_iv,money_source",
+            "tableName": "exn_xxewre01_xxewrpfs_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPFS.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,fund_iv,money_source",
+            "tableName": "exn_xxewre01_xxewrpfs_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPAE.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "exn_xxewre01_xxewrpae_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPAE.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id",
+            "tableName": "exn_xxewre01_xxewrpae_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPBE.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,beneficiary_sequence_number,primary_contingent_indicator",
+            "tableName": "exn_xxewre01_xxewrpbe_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPBE.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,beneficiary_sequence_number,primary_contingent_indicator",
+            "tableName": "exn_xxewre01_xxewrpbe_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPIN.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,create_date",
+            "tableName": "exn_xxewre01_xxewrpin_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPLD.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "exn_xxewre01_xxewrpld_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPLD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "exn_xxewre01_xxewrpld_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPPS.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source",
+            "tableName": "exn_xxewre01_xxewrpps_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPPS.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source",
+            "tableName": "exn_xxewre01_xxewrpps_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPSD.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,money_source",
+            "tableName": "exn_xxewre01_xxewrpsd_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPSD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,money_source",
+            "tableName": "exn_xxewre01_xxewrpsd_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADAHST.XXADHDBX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "base_transaction_code,client_id,plan_number,participant_id,trade_date,run_date,run_time,sequence_number",
+            "tableName": "exn_xxadahst_xxadhdbx_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADAHST.XXADHDBX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "base_transaction_code,client_id,plan_number,participant_id,trade_date,run_date,run_time,sequence_number",
+            "tableName": "exn_xxadahst_xxadhdbx_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADAHST.XXADHDRX.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "trade_date,client_id,plan_number,participant_id,run_date,run_time,db_sequence_number,base_transaction_code,posting_process_counter",
+            "tableName": "exn_xxadahst_xxadhdrx_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADAHST.XXADHDRX.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "trade_date,client_id,plan_number,participant_id,run_date,run_time,db_sequence_number,base_transaction_code,posting_process_counter",
+            "tableName": "exn_xxadahst_xxadhdrx_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPCB.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source",
+            "tableName": "exn_xxewre01_xxewrpcb_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_HISTBAL_NG_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_HISTBAL_NG_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_HISTBAL_NG_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_HISTBAL_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_HISTBAL_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source,source_cycle_date",
+            "tableName": "super_omni_newr_histbal_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT",
+                "unit": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT",
+                "intg": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT",
+                "accp": "SUPER_OMNI_NEWR_HISTBAL_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_NEWR_HISTBAL_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "incremental",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source,source_cycle_date",
+            "tableName": "super_omni_newr_histbal_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPTD.NG",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,part_number",
+            "tableName": "exn_xxewre01_xxewrptd_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPTD.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,part_number",
+            "tableName": "exn_xxewre01_xxewrptd_jb"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "FIELDOFFICE_TABLE_RS_RAW.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "fieldoffice_table_rs_raw_csv"
+        },
+        {
+            "sourceName": "mis_reporting_extracts",
+            "fileName": "F986PB.MIS.J986CP1.TPA.DATA.FILE",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "plan_code",
+            "tableName": "f986pb_mis_j986cp1_tpa_data_file"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_ITD_TRHST_NG_INT.DAT",
+                "unit": "SUPER_OMNI_ITD_TRHST_NG_INT.DAT",
+                "intg": "SUPER_OMNI_ITD_TRHST_NG_INT.DAT",
+                "accp": "SUPER_OMNI_ITD_TRHST_NG_UAT.DAT",
+                "prod": "SUPER_OMNI_ITD_TRHST_NG_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source",
+            "tableName": "super_omni_itd_tr_hist_ng_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": {
+                "dev": "SUPER_OMNI_ITD_TRHST_JB_INT.DAT",
+                "unit": "SUPER_OMNI_ITD_TRHST_JB_INT.DAT",
+                "intg": "SUPER_OMNI_ITD_TRHST_JB_INT.DAT",
+                "accp": "SUPER_OMNI_ITD_TRHST_JB_UAT.DAT",
+                "prod": "SUPER_OMNI_ITD_TRHST_JB_PRD.DAT"
+            },
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,money_source",
+            "tableName": "super_omni_itd_tr_hist_jb_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "DIV_SUB.FUND.BAL.HIST",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "CLIENT_ID,PLAN_ID,DIV_SUB_ID,FUND_ID,AS_OF_DATE",
+            "tableName": "div_sub_fund_bal_hist"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "DIV_SUB.SRC.BAL.HIST",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "CLIENT_ID,PLAN_ID,DIV_SUB_ID,MONEY_SRC,AS_OF_DATE",
+            "tableName": "div_sub_src_bal_hist"
+        },
+         {
+            "sourceName": "omni_7.4",
+             "fileName": "EXN.XXADSUMT.XXADHSFX_2_HIST.JB",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "client_id,plan_number,div_sub_id,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_2_hist_jb"
+        },
+         {
+             "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSFX.HIST.JB",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_hist_jb"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXADSUMT.XXADHSFX.HIST.NG",
+            "fileType": "delimited",
+            "fileFormat": "psv",
+            "fileSegmentedFlag": true,
+            "fileLoad": "incremental",
+            "headerPresentFlag": true,
+            "primaryKeys": "client_id,plan_number,source_cycle_date",
+            "tableName": "exn_xxadsumt_xxadhsfx_hist_ng"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "PLAN.EXPAND.FLAG.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number",
+            "tableName": "plan_expand_flag_csv"
+        },
+        {
+        "sourceName": "omni_7.4",
+        "fileName": {
+            "dev": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT.RERUN.DAT",
+            "unit": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT.RERUN.DAT",
+            "intg": "SUPER_OMNI_NEWR_HISTBAL_JB_INT.DAT.RERUN.DAT",
+            "accp": "SUPER_OMNI_NEWR_HISTBAL_JB_UAT.DAT.RERUN.DAT",
+            "prod": "SUPER_OMNI_NEWR_HISTBAL_JB_PRD.DAT.RERUN.DAT"
+        },
+        "fileType": "delimited",
+        "fileFormat": "psv",
+        "fileSegmentedFlag": false,
+        "fileLoad": "full_load",
+        "headerPresentFlag": false,
+        "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source,source_cycle_date",
+        "tableName": "super_omni_newr_histbal_jb_dat_rerun_dat"
+        },
+        {
+            "sourceName": "omni_7.4",
+            "fileName": "EXN.XXEWRE01.XXEWRPCB.DELETE.JB",
+            "fileType": "fixed_width",
+            "fileFormat": "bin",
+            "fileSegmentedFlag": true,
+            "fileLoad": "full_load",
+            "headerPresentFlag": false,
+            "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source",
+            "tableName": "exn_xxewre01_xxewrpcb_delete_jb"
+        }
+    ]
+}

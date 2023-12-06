@@ -1,0 +1,16 @@
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+
+
+def transform(spark: SparkSession, primary_key: list):
+
+    exn_xxadahst_xxadhdrx_ng_df = spark.sql("SELECT base_transaction_code as trx_code, client_id, participant_id, plan_number, cast(trade_date AS DATE), account_number, cast(cash_value_rolled AS DECIMAL(11, 2)), cast(check_number AS INTEGER), cast(cost_of_shares_rolled AS DECIMAL(11, 2)), cast(db_sequence_number AS INTEGER) AS sequence_num, cast(number_elements_rollover AS INTEGER), cast(nontaxable_amount_rolled AS DECIMAL(11, 2)), cast(run_date AS DATE), cast(number_of_shares_rolled AS DECIMAL(13, 4)), payee_address_city, payee_address_line_1, payee_address_line_2, payee_address_state, payee_address_zip_code, payee_name_line_1, payee_name_line_2, posting_process_counter as post_num, cast(rollover_payee_sequence_number AS DECIMAL(11, 2)) as payee_sequence_num, cast(run_time AS INTEGER), cast(date_format(to_date(batch_date, 'yyyyMMdd'), 'yyyy-MM-dd') as date ) as source_cycle_date, cast(total_value_rolled AS DECIMAL(13, 2)), type_of_rollover, cast(value_of_shares_rolled AS DECIMAL(11, 2)), rollover_address_1, rollover_address_2, rollover_address_3, rollover_address_4, rollover_address_5, rollover_address_6, rollover_address_7, rollover_address_8, rollover_address_9, rollover_address_10, cast(NULL AS VARCHAR(36)) AS client_key, cast(NULL AS VARCHAR(36)) AS participant_key, cast(NULL AS VARCHAR(36)) AS plan_key FROM exn_xxadahst_xxadhdrx_ng")
+    exn_xxadahst_xxadhdrx_ng_df = exn_xxadahst_xxadhdrx_ng_df.withColumn('source_system', lit('VRP-PB'))
+
+    exn_xxadahst_xxadhdrx_jb_df = spark.sql("SELECT base_transaction_code as trx_code, client_id, participant_id, plan_number, cast(trade_date AS DATE), account_number, cast(cash_value_rolled AS DECIMAL(11, 2)), cast(check_number AS INTEGER), cast(cost_of_shares_rolled AS DECIMAL(11, 2)), cast(db_sequence_number AS INTEGER) AS sequence_num, cast(number_elements_rollover AS INTEGER), cast(nontaxable_amount_rolled AS DECIMAL(11, 2)), cast(run_date AS DATE), cast(number_of_shares_rolled AS DECIMAL(13, 4)), payee_address_city, payee_address_line_1, payee_address_line_2, payee_address_state, payee_address_zip_code, payee_name_line_1, payee_name_line_2, posting_process_counter as post_num, cast(rollover_payee_sequence_number AS DECIMAL(11, 2)) as payee_sequence_num, cast(run_time AS INTEGER), cast(date_format(to_date(batch_date, 'yyyyMMdd'), 'yyyy-MM-dd') as date )  as source_cycle_date, cast(total_value_rolled AS DECIMAL(13, 2)), type_of_rollover, cast(value_of_shares_rolled AS DECIMAL(11, 2)), rollover_address_1, rollover_address_2, rollover_address_3, rollover_address_4, rollover_address_5, rollover_address_6, rollover_address_7, rollover_address_8, rollover_address_9, rollover_address_10, cast(NULL AS VARCHAR(36)) AS client_key, cast(NULL AS VARCHAR(36)) AS participant_key, cast(NULL AS VARCHAR(36)) AS plan_key FROM exn_xxadahst_xxadhdrx_jb")
+    exn_xxadahst_xxadhdrx_jb_df = exn_xxadahst_xxadhdrx_jb_df.withColumn('source_system', lit('VRP-SP'))
+
+    transform_df = exn_xxadahst_xxadhdrx_ng_df.unionByName(exn_xxadahst_xxadhdrx_jb_df)
+
+    return transform_df

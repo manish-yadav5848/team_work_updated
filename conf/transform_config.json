@@ -1,0 +1,309 @@
+{
+    "sink": [
+        {
+            "entityName": "participant_core_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,participant_id,money_source,fund_number,fund_iv,retirement_account_id"
+        },
+        {
+            "entityName": "rps_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,participant_id,fund_number"
+        },
+        {
+            "entityName": "participant_core_balance_monthly",
+            "entityLoad": "incremental",
+            "primaryKeys": "plan_number,client_id,participant_id,money_source,fund_number,fund_iv,source_cycle_date,retirement_account_id"
+        },
+        {
+            "entityName": "transaction_trend",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,div_sub_id,source_cycle_date"
+        },
+        {
+            "entityName": "part_broker_rep_agent_relation",
+            "entityLoad": "full_load",
+            "primaryKeys": "role_key"
+        },
+        {
+            "entityName": "div_sub",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,div_sub_id"
+        },
+        {
+            "entityName": "transaction_balance_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,div_sub_id,fund_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "txn",
+            "entityLoad": "full_load",
+            "primaryKeys": "activity_type,base_transaction_code,participant_id,plan_number,posting_process_counter,rev_code,run_date,run_time,trade_date,sequence_number"
+        },
+        {
+            "entityName": "participant_gaa_fund_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id"
+        },
+        {
+            "entityName": "transaction_count_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,client_id,plan_number,div_sub_id,tran_type"
+        },
+        {
+            "entityName": "plan_transaction_trend",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "participant_source_transfer_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,participant_id,transfer_balance_seq_number,source_cycle_date"
+        },
+        {
+            "entityName": "participant",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,participant_id,plan_number,retirement_account_id"
+        },
+        {
+            "entityName": "plan",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number"
+        },
+        {
+            "entityName": "participant_source",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,participant_id,plan_number,money_source,retirement_account_id"
+        },
+        {
+            "entityName": "plan_fund",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,fund_number,plan_number,fund_iv"
+        },
+        {
+            "entityName": "fund_asset",
+            "entityLoad": "full_load",
+            "primaryKeys": "asset_code"
+        },
+        {
+            "entityName": "participant_life_fund_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "fund_number,plan_number,participant_id"
+        },
+        {
+            "entityName": "participant_alt_payee",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,participant_id,plan_number"
+        },
+        {
+            "entityName": "client",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id"
+        },
+        {
+            "entityName": "disbursement_rollover",
+            "entityLoad": "full_load",
+            "primaryKeys": "trade_date,client_id,plan_number,participant_id,run_date,run_time,trx_code,post_num,sequence_num"
+        },
+        {
+            "entityName": "participant_fund_loan",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,fund_number,participant_id,plan_number,loan_number"
+        },
+        {
+            "entityName": "plan_withdrawal_type",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,withdrawal_type,withdrawal_code"
+        },
+        {
+            "entityName": "participant_auto_enrollments",
+            "entityLoad": "full_load",
+            "primaryKeys": "participant_id,client_id,plan_number"
+        },
+        {
+            "entityName": "participant_installments",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,create_date,end_date,participant_id,plan_number"
+        },
+        {
+            "entityName": "plan_source",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,money_source,plan_number"
+        },
+        {
+            "entityName": "cust_retirement_account",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,plan_number,participant_id,cust_ods_agreement_id"
+        },
+        {
+            "entityName": "pais_contact",
+            "entityLoad": "full_load",
+            "primaryKeys": "pais_entity_key"
+        },
+        {
+            "entityName": "source_fund_future_allocation",
+            "entityLoad": "full_load",
+            "primaryKeys": "fund_number,plan_number,source,participant_id"
+        },
+        {
+            "entityName": "third_party_admin",
+            "entityLoad": "full_load",
+            "primaryKeys": "tpa_code"
+        },
+        {
+            "entityName": "producer",
+            "entityLoad": "full_load",
+            "primaryKeys": "producer_role_key"
+        },
+        {
+            "entityName": "disbursement",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,base_transaction_code,trade_date,participant_id,plan_number,run_date,run_time,sequence_num"
+        },
+        {
+            "entityName": "plan_participant_status_trend",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date,plan_number"
+        },
+        {
+            "entityName": "participant_status_trend",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date,plan_number,div_sub_id"
+        },
+        {
+            "entityName": "participant_min_distributions",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,participant_id,plan_number,current_life_expectancy,rmd_due_date"
+        },
+        {
+            "entityName": "plan_fund_source",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,fund_iv,money_source,plan_number"
+        },
+        {
+            "entityName": "participant_beneficiary",
+            "entityLoad": "full_load",
+            "primaryKeys": "participant_id,plan_number,beneficiary_sequence_number,beneficiary_level,client_id,retirement_account_id"
+        },
+        {
+            "entityName": "crm_trustee_contact",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,trustee_name"
+        },
+        {
+            "entityName": "participant_loan",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,loan_number,loan_use_description,participant_id,plan_number,retirement_account_id"
+        },
+        {
+            "entityName": "nq_plan",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number"
+        },
+        {
+            "entityName": "nq_beneficiary",
+            "entityLoad": "full_load",
+            "primaryKeys": "beneficiary_id,participant_id,plan_number"
+        },
+        {
+            "entityName": "nq_employer",
+            "entityLoad": "full_load",
+            "primaryKeys": "employer_ein,employer_id,client_id"
+        },
+        {
+            "entityName": "nq_participant_contribution",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id"
+        },
+        {
+            "entityName": "nq_participant_distribution",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id"
+        },
+        {
+            "entityName": "nq_participant_fund",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id"
+        },
+        {
+            "entityName": "nq_participant_fund_monthly",
+            "entityLoad": "incremental",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id,source_cycle_date"
+        },
+        {
+            "entityName": "nq_part_investment_election",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id"
+        },
+        {
+            "entityName": "nq_part_investment_product_elc",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,investment_product_id"
+        },
+        {
+            "entityName": "nq_participant",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,party_id"
+        },
+        {
+            "entityName": "nq_transaction",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,source_id,fund_id,transaction_type_code,transaction_date,newr_nqtxn_key"
+        },
+        {
+            "entityName": "auto_method",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number"
+        },
+        {
+            "entityName": "automation_type",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "money_source_helper",
+            "entityLoad": "full_load",
+            "primaryKeys": "row_id"
+        },
+        {
+            "entityName": "premier_fund_translation",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "product_helper",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "role_code_helper",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "sponsor",
+            "entityLoad": "full_load",
+            "primaryKeys": "row_id,created_timestamp"
+        },
+        {
+            "entityName": "transaction_type",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "market_segment",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        },
+        {
+            "entityName": "ssn_change_merge_helper",
+            "entityLoad": "full_load",
+            "primaryKeys": "admin_tran_code,plan_number,client_id,old_participant_id,new_participant_id"
+        },
+        {
+            "entityName": "field_office_description",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
+        }
+    ]
+}

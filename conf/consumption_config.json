@@ -1,0 +1,264 @@
+{
+    "sink": [
+        {
+            "entityName": "participant_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,participant_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "participant_source_txn",
+            "entityLoad": "full_load",
+            "primaryKeys": "participant_id,plan_number,source,trade_date,fund_number,client_id,rev_code"
+        },
+        {
+            "entityName": "participant_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "participant_id,plan_number,client_id,run_date,trade_date,base_transaction_code,activity_type"
+        },
+        {
+            "entityName": "participant_fund_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,fund_number,source_cycle_date,fund_iv,retirement_account_id"
+        },
+        {
+            "entityName": "plan_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,activity_type,base_transaction_code,run_date,trade_date,rev_code"
+        },
+        {
+            "entityName": "part_fund_source_txn",
+            "entityLoad": "full_load",
+            "primaryKeys": "participant_id,plan_number,money_source,client_id,run_date,trade_date,posting_process_counter"
+        },
+        {
+            "entityName": "plan_fund_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "fund_number,plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "plan_fund_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "fund_number,plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "producer_participant_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "rep_tax_id_ssn,plan_number,source_cycle_date,participant_id,retirement_account_id"
+        },
+        {
+            "entityName": "producer_plan_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "rep_tax_id_ssn,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "producer_plan_fund_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,rep_tax_id_ssn,fund_number,source_cycle_date"
+        },
+        {
+            "entityName": "producer_plan_fund_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,plan_number,rep_tax_id_ssn,money_source,fund_number"
+        },
+        {
+            "entityName": "client_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date"
+        },
+        {
+            "entityName": "client_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date"
+        },
+        {
+            "entityName": "client_balance_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date"
+        },
+        {
+            "entityName": "div_sub_fund_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,fund_number,div_sub_id,client_id,plan_number"
+        },
+        {
+            "entityName": "div_sub_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,div_sub_id,client_id,plan_number,money_source"
+        },
+        {
+            "entityName": "div_sub_fund_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,div_sub_id,plan_number,fund_number,money_source,source_cycle_date"
+        },
+        {
+            "entityName": "participant_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,plan_number,participant_id,client_id"
+        },
+        {
+            "entityName": "participant_balance_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,plan_number,participant_id,client_id"
+        },
+        {
+            "entityName": "part_fund_loan_monthly",
+            "entityLoad": "incremental",
+            "primaryKeys": "plan_number,participant_id,loan_number,fund_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "part_fund_loan_quarterly",
+            "entityLoad": "incremental",
+            "primaryKeys": "plan_number,participant_id,loan_number,fund_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "part_gaa_fund_bal_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,fund_number,source_cycle_date"
+        },
+        {
+            "entityName": "part_gaa_fund_bal_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,fund_number,source_cycle_date"
+        },
+        {
+            "entityName": "part_source_balance_rollup",
+            "entityLoad": "full_load",
+            "primaryKeys": "source,plan_number,participant_id,client_id,source_cycle_date,div_sub_id,retirement_account_id"
+        },
+        {
+            "entityName": "plan_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "plan_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "plan_balance_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "plan_source_txn",
+            "entityLoad": "full_load",
+            "primaryKeys": "run_date,client_id,money_source,trade_date,plan_number"
+        },
+        {
+            "entityName": "plan_loan_rollup",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,client_id,source_cycle_date"
+        },
+        {
+            "entityName": "plan_source_type",
+            "entityLoad": "full_load",
+            "primaryKeys": "money_source_code,plan_number,client_id"
+        },
+        {
+            "entityName": "plan_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,money_source,plan_number,client_id"
+        },
+        {
+            "entityName": "plan_source_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "source_cycle_date,money_source,plan_number,client_id"
+        },
+        {
+            "entityName": "part_source_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,participant_id,money_source,run_date,base_transaction_code,rev_code,posting_process_counter"
+        },
+        {
+            "entityName": "plan_div_sub_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,div_sub_id,run_date,base_transaction_code,trade_date,rev_code,pay_period_end_date"
+        },
+        {
+            "entityName": "plan_divsub_source_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,div_sub_id,source,base_transaction_code,run_date,trade_date"
+        },
+        {
+            "entityName": "plan_source_txn_summary",
+            "entityLoad": "full_load",
+            "primaryKeys": "plan_number,money_source,run_date,base_transaction_code,rev_code,posting_process_counter"
+        },
+        {
+            "entityName": "plan_fund_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,fund_number,money_source,source_cycle_date"
+        },
+        {
+            "entityName": "nq_plan_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,source_cycle_date,source_id"
+        },
+        {
+            "entityName": "nq_plan_balance_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "nq_plan_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "nq_plan_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "nq_participant_source_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,source_cycle_date,source_id"
+        },
+        {
+            "entityName": "nq_participant_balance_quarterly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,source_cycle_date"
+        },
+        {
+            "entityName": "nq_participant_balance_monthly",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,source_cycle_date"
+        },
+        {
+            "entityName": "nq_client_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,source_cycle_date"
+        },
+        {
+            "entityName": "div_sub_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,div_sub_id,plan_number,source_cycle_date"
+        },
+        {
+            "entityName": "nq_participant_balance",
+            "entityLoad": "full_load",
+            "primaryKeys": "client_id,plan_number,participant_id,source_cycle_date"
+        },
+        {
+            "entityName": "div_sub_source_balance_daily",
+            "entityLoad": "incremental",
+            "primaryKeys": "client_id,plan_number,div_sub_id,money_source,source_cycle_date"
+        },
+        {
+            "entityName": "div_sub_fund_balance_daily",
+            "entityLoad": "incremental",
+            "primaryKeys": "client_id,plan_number,div_sub_id,fund_iv,source_cycle_date"
+        },
+        {
+            "entityName": "plan_fund_balance_daily",
+            "entityLoad": "incremental",
+            "primaryKeys": "client_id,plan_number,fund_iv,source_cycle_date"
+        },
+        {
+            "entityName": "plan_source_balance_daily",
+            "entityLoad": "incremental",
+            "primaryKeys": "client_id,plan_number,money_source,source_cycle_date"
+        }
+    ]
+}
