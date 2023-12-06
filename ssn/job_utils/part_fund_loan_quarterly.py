@@ -1,0 +1,7 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+
+
+def transform(spark: SparkSession):
+    df = spark.sql("select client_id, fund_number, participant_id, loan_number, plan_number, source_cycle_date,div_sub_id,cast(sum( LOAN_PRINCIPAL_REPAID) as decimal(11,2)) as LOAN_PRINCIPAL_REPAID, cast(sum( ORIGINAL_LOAN_AMOUNT)  as  decimal(11,2)) as ORIGINAL_LOAN_AMOUNT   , cast(sum( LOAN_CALENDAR_YEAR_INTEREST)  as  decimal(11,2)) as LOAN_CALENDAR_YEAR_INTEREST , cast(sum( LOAN_INTEREST_REPAID)  as  decimal(11,2)) as LOAN_INTEREST_REPAID   , cast(sum( loan_balance)  as  decimal(12,2)) as loan_balance   , max(LOAN_PAYMENT_PERCENT) as LOAN_PAYMENT_PERCENT  from (select pfl.client_id, fund_number, coalesce( ssnh.new_participant_id,participant_id) as participant_id, loan_number, pfl.plan_number, source_cycle_date, LOAN_PRINCIPAL_REPAID, ORIGINAL_LOAN_AMOUNT, LOAN_CALENDAR_YEAR_INTEREST, LOAN_INTEREST_REPAID, loan_balance, LOAN_PAYMENT_PERCENT, div_sub_id from newr_consumption.part_fund_loan_quarterly pfl left outer join (select old_participant_id,new_participant_id from  newr_transform.ssn_change_merge_helper where admin_tran_code in ('850','851') and concat(tran_year,tran_month,tran_day)=(select max(concat(tran_year,tran_month,tran_day)) from newr_transform.ssn_change_merge_helper)) ssnh on pfl.participant_id=ssnh.old_participant_id )   group by client_id, fund_number, participant_id, loan_number, plan_number, source_cycle_date,div_sub_id")
+    return df
