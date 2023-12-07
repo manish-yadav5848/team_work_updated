@@ -1,0 +1,115 @@
+create or replace PROCEDURE            DELTA_LOAD_PROC
+(
+  MAIN_TABLE IN VARCHAR2,
+  DELTA_TABLE IN VARCHAR2,
+  P_KEY_STR IN VARCHAR2
+) IS
+  -- Variables to store the intermidiate SQL strings for MERGE Operation Query
+  join_stmt VARCHAR2(10000) := '';
+  l_update_col VARCHAR2(10000) := '';
+  insert_col_list VARCHAR2(10000) := '';
+  delta_insert_col VARCHAR2(10000) := '';
+
+BEGIN
+
+  -- Start Transaction
+
+  BEGIN
+    SAVEPOINT start_merge_transaction;
+
+      -- Creates JOIN Statement for MERGE Operation Query
+      IF P_KEY_STR IS NOT NULL THEN
+        FOR p_key IN
+        (
+          SELECT level,
+          trim(regexp_substr(P_KEY_STR, '[^,]+', 1, LEVEL)) str
+          FROM dual
+          CONNECT BY regexp_substr(P_KEY_STR, '[^,]+', 1, LEVEL) IS NOT NULL
+        )
+        LOOP
+          IF p_key.level = 1 THEN
+            join_stmt := 'mt.' || p_key.str || '=dt.' || p_key.str;
+          ELSE
+            join_stmt := join_stmt || ' AND mt.' || p_key.str || '=dt.' || p_key.str;
+          END IF;
+        END LOOP;
+        -- dbms_output.put_line('JOIN condition is - ' || join_stmt);
+      END IF;
+
+      -- Creates UPDATE SET values string for UPDATE part of MERGE Operation Query
+      FOR u_item IN
+      (
+        SELECT
+          RANK() OVER (PARTITION BY 1 ORDER BY column_name) AS rnk,
+          column_name,
+          count(*) OVER (PARTITION BY 1) AS cnt
+        FROM user_tab_columns
+        WHERE table_name=upper(MAIN_TABLE)
+        AND lower(column_name) NOT IN (
+          SELECT trim(regexp_substr(P_KEY_STR, '[^,]+', 1, LEVEL)) str
+          FROM dual
+          CONNECT BY regexp_substr(P_KEY_STR, '[^,]+', 1, LEVEL) IS NOT NULL
+        )
+      )
+      LOOP
+        -- dbms_output.put_line('UPDATE column listing is as follows for MERGE operation ='||u_item.cnt);
+        IF u_item.rnk = u_item.cnt THEN
+          l_update_col := l_update_col || 'mt.' || lower(u_item.column_name) || '=dt.' || lower(u_item.column_name);
+        ELSE
+          l_update_col := l_update_col || 'mt.' || lower(u_item.column_name) || '=dt.' || lower(u_item.column_name) || ',';
+        END IF;
+      END LOOP;
+      -- dbms_output.put_line(l_update_col);
+
+
+      -- Creates INSERT VALUES for INSERT part of MERGE Operation Query
+      FOR i_item IN
+      (
+        SELECT
+          RANK() OVER (PARTITION BY 1 ORDER BY column_name) AS rnk,
+          column_name,
+          count(*) OVER (PARTITION BY 1) AS cnt FROM user_tab_columns
+        WHERE table_name=upper(MAIN_TABLE)
+      )
+      LOOP
+        -- dbms_output.put_line('Total count of cols to be inserted = '||i_item.cnt);
+        IF i_item.rnk = i_item.cnt THEN
+          delta_insert_col := delta_insert_col || 'dt.' || lower(i_item.column_name);
+          insert_col_list := insert_col_list || lower(i_item.column_name);
+        ELSE
+          delta_insert_col := delta_insert_col || 'dt.' || lower(i_item.column_name) || ',';
+          insert_col_list := insert_col_list || lower(i_item.column_name) || ',';
+        END IF;
+      END LOOP;
+      -- dbms_output.put_line(delta_insert_col);
+
+
+      -- Executes the MERGE Operation to persist the delta from Azure ADF
+      EXECUTE IMMEDIATE
+      'MERGE INTO '
+      ||MAIN_TABLE
+      || ' mt USING (SELECT * FROM '
+      || DELTA_TABLE
+      || ') dt ON ('
+      -- || ' WHERE delta_op_ind IN (''U'',''I'',''D'')) dt ON ('
+      || join_stmt
+      || ') WHEN MATCHED THEN UPDATE SET '
+      || l_update_col
+      || ' DELETE WHERE (dt.delta_op_ind = ''D'') WHEN NOT MATCHED THEN INSERT ('
+      || insert_col_list
+      ||') VALUES ('
+      || delta_insert_col
+      ||')';
+
+      EXECUTE IMMEDIATE 'TRUNCATE TABLE ' || DELTA_TABLE;
+
+      -- commit transaction if everything works fine until this point
+    COMMIT;
+
+    EXCEPTION
+        WHEN OTHERS THEN
+            ROLLBACK TO start_merge_transaction;
+            RAISE;
+  END;
+
+END;
