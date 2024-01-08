@@ -60,7 +60,7 @@ from wealthcentral.jobs.raw_to_transform.job_utils import (
     transaction_balance_summary,
     client,
     automation_type,
-    auto_method,
+    auto_method,cust_adv_helper,
 )
 
 
@@ -138,4 +138,5 @@ JobNameToJobMapper = {
     "client": client.transform,
     "automation_type": automation_type.transform,
     "auto_method": auto_method.transform,
+    "cust_adv_helper": cust_adv_helper.transform,
 }
