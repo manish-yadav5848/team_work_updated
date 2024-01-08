@@ -18,7 +18,7 @@
         {
             "entityName": "participant_fund_balance",
             "entityLoad": "full_load",
-            "primaryKeys": "plan_number,participant_id,fund_number,source_cycle_date,fund_iv,retirement_account_id"
+            "primaryKeys": "client_id,plan_number,participant_id,fund_number,source_cycle_date,fund_iv,retirement_account_id"
         },
         {
             "entityName": "plan_txn_summary",

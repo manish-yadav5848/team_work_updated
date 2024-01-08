@@ -1519,6 +1519,17 @@
             "headerPresentFlag": false,
             "primaryKeys": "client_id,plan_number,participant_id,fund_iv,money_source",
             "tableName": "exn_xxewre01_xxewrpcb_delete_jb"
+        },
+        {
+            "sourceName": "impala",
+            "fileName": "CUST_ADV_HELPER.CSV",
+            "fileType": "delimited",
+            "fileFormat": "csv",
+            "fileSegmentedFlag": false,
+            "fileLoad": "full_load",
+            "headerPresentFlag": true,
+            "primaryKeys": "",
+            "tableName": "cust_adv_helper"
         }
     ]
 }

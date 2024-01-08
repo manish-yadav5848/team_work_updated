@@ -304,6 +304,11 @@
             "entityName": "field_office_description",
             "entityLoad": "full_load",
             "primaryKeys": ""
+        },
+        {
+            "entityName": "custom_adv_helper",
+            "entityLoad": "full_load",
+            "primaryKeys": ""
         }
     ]
 }
