@@ -490,5 +490,11 @@ schema = {
     "nullable": True,
     "start": 540,
     "end": 547
+  },
+  "first_payment_date": {
+    "type": "string",
+    "nullable": True,
+    "start": 548,
+    "end": 555
   }
 }

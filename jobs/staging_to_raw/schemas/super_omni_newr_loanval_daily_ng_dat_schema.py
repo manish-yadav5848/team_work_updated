@@ -13,4 +13,5 @@ schema = StructType([
     StructField("source_cycle_date", StringType(), True),
     StructField("source_system", StringType(), True),
     StructField("loan_use_indicator", StringType(), True),
-    StructField("loan_number", StringType(), True)])
+    StructField("loan_number", StringType(), True),
+    StructField("highest_outstanding_loan_balance", StringType(), True)])
